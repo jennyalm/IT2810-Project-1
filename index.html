@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mitt kunstgalleri</title>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"> </script>
+    <script type="text/javascript" src="javaskript.js"></script>
+
+
+
+</head>
+<body>
+    <header>
+        <h1>KUNSTGALLERI</h1>
+
+        <div class="dropdown">
+            <div id = "knapp-info" onclick="showInfo()"><h4 id = "info">Info om kunstneren</h4></div>
+
+            <div id="k-info">
+            <p id="k-tekst">
+                Pablo Picasso er en tegner og grafiker fra Trondheim. Pablo lager mye abstakt kunst,
+                ved siden av studiene på NTNU.
+                Han har utviklet nye kunst-ismer og er en av 2000-tallets mest innflytelsesrike kunstnere.
+                Allerede 13 år gammel viste Pablo Picasso usedvanlige evner som tegner og maler.
+                Som 15-åring begynte han på Steinerskolen der faren var lærer. I 2017 dro han
+                til Trondheim, for å studere ved NTNU gløshaugen. Kunstverkene "SVG" og "Canvas" er de mest
+                kjente bildene og blir særlig godt likt for sin digitale og skalerbare utforming.
+                </p>
+            </div>
+        </div>
+    </header>
+
+<div class= "flex-container">
+<div id = "svg">
+    <svg class="scale" viewBox="0 0 500 500">
+<!-- height="500px" width="500px" -->
+
+        <polygon id = "stjerne" points= "105,60 80,154 150,94 60,94 135,154" />
+
+        <polygon id = "trekant" points= "150,290 250,190 350,290"  />
+
+        <ellipse id = "sirkel"  cx="400" cy="400" rx="70" ry="70"/>
+
+        <rect id = "rektangel"
+            x="50"
+            y="340"
+            height= "100"
+            width= "150"
+            />
+
+        <line  id = "linje1" x1="350" y1="100" x2="450" y2="200" style="stroke:#67ff3d;stroke-width:5" />
+        <line  id = "linje2" x1="450" y1="100" x2="350" y2="200" style="stroke:#67ff3d;stroke-width:5" />
+
+        <line  id = "linje3" x1="400" y1="100" x2="400" y2="200" style="stroke:#67ff3d;stroke-width:5" />
+        <line  id = "linje4" x1="350" y1="150" x2="450" y2="150" style="stroke:#67ff3d;stroke-width:5" />
+
+
+    </svg>
+</div>
+
+<div id = c-div>
+    <canvas id= "canvas" height="500px" width="500px" >
+
+    </canvas>
+</div>
+
+</div>
+
+    <div id="tittel">
+        <div id ="s-tittel"><h3>SVG</h3></div>
+        <div id= "c-tittel" ><h3>Canvas</h3></div>
+
+    </div>
+
+
+<div id= "tekst-container">
+
+    <div class="dropdown">
+        <div id="knapp" ><h1 id = "doku">Dokumentasjon</h1></div>
+        <div id="dokumentasjon-tekst">
+
+            <p id = "dokumentasjon">
+                <p></p>
+                    <b>CSS/Flexbox</b>
+                    <p>
+                    Flexbox er en fin måte å strukturere elementer på, og det er derfor
+                    jeg har valgt å implementere denne løsningen i min nettside. Ved bruk av
+                    flexbox får man et flytende layout som gjør det enkelt å plassere elementer
+                    hvor man vil.  Rundt SVG og Canvas objektene har jeg en flex-container som
+                    inneholder flex-elementene til SVG-objektet og canvas-objektet. Bruken av
+                    flexbox gjorde det enkelt å plassere disse to objektene på en rad. Display er
+                    satt til «flex», for å få flexbox egenskapene. Flex-direction er satt til «row»,
+                    for å plassere elementene på rad og justify-content er satt til «space-evenly» som
+                    sørger for at elementene er jevnt fordelt på siden. Tittel på SVG og canvas kunsten
+                    er plassert på samme måte. I den tekstlige delen av siden(denne her),
+                    er flex-direction satt til «column». De fleste elementene er midtstilte hvor
+                    justify-content er satt til «center».</p>
+
+                    <b>HTML canvas/SVG</b>
+                    <p>
+                    Både Html canvas og SVG kan brukes for å tegne grafikk.
+                    Html canvas tegner grafikken ved bruk av JavaScript, mens SVG kan
+                    tegnes direkte i html-filen. I SVG elementet mitt har jeg
+                    8 elementer(stjerne, firkant, sirkel, trekant, 4 streker) med
+                    forskjellige farger og effekter. Plasseringen av objektene blir hardkodet
+                    i html-filen. Effektene blir lagt til i js-filen, ved bruk av jQuery.
+
+                    Canvas elementet i html-filen er kun en container for grafikken,
+                    og figurene tegnet jeg i js-filen. For sirkelen og rektangelen kan man
+                    tegne med «.arc()» og «.fillRect()», mens de andre figurene ble tegnet
+                    ved bruk av paths. Brukerinteraksjon med canvas var mye mer komplisert å
+                    få til enn med SVG. For å få til interaksjon med hvert element i canvas er
+                    man nødt til å oppgi nøyaktige koordinater til figurene og finne en måte
+                    som gjør at man vet hvilket koordinat musen trykker på. For å skape mest
+                    mulig likhet mellom SVG og canvas kunstverkene har jeg derfor valgt å
+                    implementer effekter («hover» og «click») på selve canvas elementet og
+                    ikke hver av figurene.</p>
+
+                    <b>jQuery</b>
+                    <p>
+                    Jeg har brukt jQuery for å kunne hente ut elementer, og deretter legge til
+                    effekter ved ulike events («hover», «click», «mouseenter», «mouseleave».
+                    I «head» i html-filen har jeg importert jQuery biblioteket.  I tillegg så har
+                    brukt jQuery i js-filen for å sjekke at hele html filen er lastet inn før js-filen
+                    blir kjørt($(document).ready()). jQuery gjør det lettvint å hente ut objekter og
+                    utføre handling på disse. Dette gjorde det derfor svært gunstig å bruke jQuery
+                    i sammenheng med SVG elementene. Det er derimot ikke like gunstig å bruke jQuery
+                    på canvas, ettersom figurene ikke er lagret som individuelle objekter. Dette løste
+                    jeg ved å hente ut hele canvas objektet, og legge til effekter(«hover», «click»)
+                    på hele canvas’et. </p>
+
+                    <b>Cross-browser testing</b>
+                    <p>
+                    Har sjekket nettsiden i Firefox og Google Chrome. Sørget for at alt så likt ut,
+                    både i størrelse og farge. I tillegg sjekket jeg at siden er responsive i begge
+                    nettleserne ved å forminske og forstørre fane-vinduet.</p>
+
+                    <b>Tutorials</b>
+                    <p>
+                    Jeg har brukt disse nettsidene for å komme i gang og for å bli kjent med SVG, canvas og jQuery:
+                    <ul>
+                        <li>w3schools om canvas:<a href="https://www.w3schools.com/tags/canvas_arc.asp">https://www.w3schools.com/tags/canvas_arc.asp</a></li>
+                        <li>w3schools om SVG: <a href="https://www.w3schools.com/html/html5_svg.asp">https://www.w3schools.com/html/html5_svg.asp</a></li>
+                        <li>Drawing shapes with canvas: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes</a></li>
+                        <li>jQuery Tutorial:<a href="https://www.w3schools.com/jquery/">https://www.w3schools.com/jquery/</a></li>
+
+                    </ul>
+                </p>
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+            <a href="http://www.facebook.com"><img  class = "bilde" src="bilder/fa.png" alt="facebook" /></a>
+            <a href="http://www.instagram.com"><img class = "bilde" src="bilder/in.png" alt="instagram" /></a>
+            <a href="http://www.youtube.com"><img class= "bilde" src="bilder/utube.png" alt="youtube" /></a>
+</footer>
+        <p>&copy; Pablo Picasso </p>
+
+
+</body>
+</html>

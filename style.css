@@ -1,0 +1,230 @@
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 4vw;
+    color:  #4b4b4b;
+    font-family: "Lato",sans-serif;
+    font-weight: 100;
+}
+
+h4 {
+    display: flex;
+    justify-content: center;
+    color:  #4b4b4b;
+    font-family: "Lato",sans-serif;
+    font-size: 1.5vw;
+}
+
+#tekst-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+
+p   {
+    font-size: 1.2vw;
+    font-family: "Lato",sans-serif;
+    color: #4b4b4b;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    line-height: 1.5;
+    /* line-height: 1.5; */
+}
+
+#tittel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    font-size: 1.2vw;
+    font-family: "Lato",sans-serif;
+    color: #4b4b4b;
+    margin-top: 0px;
+    margin-bottom: 50px;
+
+}
+
+#s-tittel {
+    text-align: center;
+    margin: auto;
+    width: 40%;
+}
+
+#c-tittel {
+    text-align: center;
+    margin: auto;
+    width: 40%;
+
+}
+
+#knapp-info {
+    font-family: "Lato",sans-serif;
+    color: #4b4b4b;
+}
+
+#info:hover{
+    color: black;
+}
+#k-info{
+    display: none;
+    width: 50%;
+    height: 100%;
+}
+
+#k-tekst{
+    line-height: 1.5;
+    background-color: white;
+}
+
+#knapp {
+    height: 50%;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-style: none;
+    font-size: 1.2vw;
+    font-family: "Lato",sans-serif;
+    color: #4b4b4b;
+}
+
+#doku:hover {
+    color: black;
+}
+
+#dokumentasjon-tekst {
+    display: none;
+    width: 60%;
+
+}
+
+#dokumentasjon{
+    line-height: 1.5;
+}
+
+b{
+    font-size: 1.2vw;
+    font-family: "Lato",sans-serif;
+
+}
+
+li {
+    font-size: 1.2vw;
+    font-family: "Lato",sans-serif;
+    line-height: 1.5;
+    color: #4b4b4b;
+}
+
+.dropdown{
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* justify-content:center; */
+
+}
+
+body{
+    background-image: url(brick.jpg);
+    background-attachment: fixed;
+}
+}
+
+header{
+    background-color: white;
+}
+
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+
+.flex-container svg, canvas {
+    width: 100%;
+    height: 100%;
+    box-shadow: 10px 10px 36px -26px rgba(0,0,0,1);
+    border-color: #4b4b4b;
+    border-style: solid;
+    border-width: 10px;
+}
+
+#svg{
+    width: 40%;
+    height: 40%;
+    margin: auto;
+}
+
+#c-div{
+    margin: auto;
+    width: 40%;
+    height: 40%;
+}
+
+svg{
+    width: 100%;
+    /* margin-left: 100px;
+    margin-right: 20px; */
+    /* margin-top: 10px;
+    margin-bottom: 0px; */
+    background-color:  white;
+    border-color: #4b4b4b;
+    border-style: solid;
+    border-width: 10px;
+}
+
+canvas {
+    width: 100%;
+    background-color:  white ;
+    /* margin-left: 20px;
+    margin-right: 100px; */
+    /* margin-top: 10px;
+    margin-bottom: 0px; */
+}
+
+.bilde{
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+#trekant {
+    fill:  #ffb8eb;
+    stroke:  #fe7ad8;
+    stroke-width: 5;
+}
+
+#rektangel {
+    fill: lightblue;
+    stroke:  #75cddf;
+    stroke-width: 5;
+}
+
+#stjerne {
+    fill:  #fff894;
+    stroke:  #fef55d;
+    stroke-width: 5;
+}
+
+#sirkel{
+    fill:  #fe4577;
+    stroke: #e0154c;
+    stroke-width: 5;
+}
